@@ -67,6 +67,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <sys/socket.h>
+#include <sys/time.h>
 #include <fcntl.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
@@ -75,6 +76,10 @@
 #include <pthread.h>
 #include <signal.h>
 #include <limits.h>
+#endif
+
+#ifdef MAC_OSX
+#include <sys/_select.h>
 #endif
 
 #ifndef _WIN32
@@ -261,7 +266,7 @@ typedef int (*HOOK_FUNCPTR)(struct user_param_t* uparam);
 /* socket event callback function */
 typedef int (*SOCK_EVENT_CB)(SOCKET socket);
 /* socket event loop function(true is loop break) */
-typedef int (*SOCK_EVENT_BREAK_CB)();
+typedef int (*SOCK_EVENT_BREAK_CB)(void);
 
 /* socket buffer */
 struct sock_buf_t {
@@ -343,8 +348,8 @@ APIEXPORT int forward_handler(SOCKET socket, int http_status, int* content_size)
 APIEXPORT int error_handler(SOCKET socket, int http_status, int* content_size);
 
 /* sock.c */
-APIEXPORT void sock_initialize();
-APIEXPORT void sock_finalize();
+APIEXPORT void sock_initialize(void);
+APIEXPORT void sock_finalize(void);
 APIEXPORT int sock_mkserver(const char* host, ushort port, struct sockaddr_in* server);
 APIEXPORT SOCKET sock_connect_server(const char* host, ushort port);
 APIEXPORT char* sock_local_addr(char* ip_addr);
@@ -358,7 +363,7 @@ APIEXPORT int url_http_status(const char* msg);
 APIEXPORT char* get_user_param(struct user_param_t* u_param, const char* name);
 
 /* header.c */
-APIEXPORT struct http_header_t* alloc_http_header();
+APIEXPORT struct http_header_t* alloc_http_header(void);
 APIEXPORT void init_http_header(struct http_header_t* hdr);
 APIEXPORT void free_http_header(struct http_header_t* hdr);
 APIEXPORT int set_http_header(struct http_header_t* hdr, const char* name, const char* value);
@@ -381,19 +386,19 @@ APIEXPORT char* gmtstr(char* buf, int buf_size, struct tm* gmtime);
 APIEXPORT char* now_gmtstr(char* buf, int buf_size);
 APIEXPORT char* jststr(char* buf, int buf_size, struct tm* jstime);
 APIEXPORT char* now_jststr(char* buf, int buf_size);
-APIEXPORT int64 system_time();
-APIEXPORT uint system_seconds();
+APIEXPORT int64 system_time(void);
+APIEXPORT uint system_seconds(void);
 
 /* error.c */
 APIEXPORT void err_initialize(const char* error_file);
-APIEXPORT void err_finalize();
+APIEXPORT void err_finalize(void);
 APIEXPORT void err_write(const char* fmt, ...);
 APIEXPORT void err_log(struct in_addr addr, const char* fmt, ...);
 
 /* logout.c */
 APIEXPORT void logout_initialize(const char* out_file);
-APIEXPORT void logout_finalize();
-APIEXPORT void logout(const char* fmt, ...);
+APIEXPORT void logout_finalize(void);
+APIEXPORT void logout_write(const char* fmt, ...);
 
 /* srelay_client.c */
 APIEXPORT struct srelay_server_t* srelay_initialize(int count, const char* host_tbl[], ushort port_tbl[], int check_interval_time, ulong host_addr, ushort host_port);
@@ -414,7 +419,7 @@ APIEXPORT char* mime_decode(char* dst, int dst_size, const char* dst_enc, const 
 
 /* sockevent.c */
 APIEXPORT void sock_event(int sc, const SOCKET sockets[], const SOCK_EVENT_CB cbfuncs[], const SOCK_EVENT_BREAK_CB breakfunc);
-APIEXPORT void* sock_event_create();
+APIEXPORT void* sock_event_create(void);
 APIEXPORT int sock_event_add(const void* sev, SOCKET socket);
 APIEXPORT int sock_event_delete(const void* sev, SOCKET socket);
 APIEXPORT int sock_event_disable(const void* sev, SOCKET socket);

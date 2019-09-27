@@ -2,7 +2,7 @@
 /*
  * The MIT License
  *
- * Copyright (c) 2008-2011 YAMAMOTO Naoki
+ * Copyright (c) 2008-2019 YAMAMOTO Naoki
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -85,7 +85,7 @@ static int hash_calc(struct hash_t* ht, const char* key)
 {
     unsigned int hash_val;
 
-    hash_val = MurmurHash2A(key, strlen(key), HASH_SEED);
+    hash_val = MurmurHash2A(key, (int)strlen(key), HASH_SEED);
     return (hash_val % ht->capacity);
 }
 

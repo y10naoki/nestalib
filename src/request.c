@@ -2,7 +2,7 @@
 /*
  * The MIT License
  *
- * Copyright (c) 2008-2011 YAMAMOTO Naoki
+ * Copyright (c) 2008-2019 YAMAMOTO Naoki
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -58,7 +58,7 @@ static int set_query_param(struct request_t* req, char* qs)
         /* パラメーターは'&'で区切られる */
         index = indexof(qs, '&');
         if (index < 0)
-            index = strlen(qs);
+            index = (int)strlen(qs);
         if (index > sizeof(tbuf)-2)
             return -1;  /* too long */
 
@@ -486,7 +486,7 @@ APIEXPORT struct request_t* get_request(SOCKET socket, struct in_addr addr, int*
     }
     *tp = '\0';
 
-    len = strlen(req_ptr);
+    len = (int)strlen(req_ptr);
     if (len > MAX_METHOD_LINE_SIZE-1) {
         err_log(addr, "get_request: length(%d) too large.", len);
         recv_free(req_ptr);

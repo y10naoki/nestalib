@@ -2,7 +2,7 @@
 /*
  * The MIT License
  *
- * Copyright (c) 2008-2011 YAMAMOTO Naoki
+ * Copyright (c) 2008-2019 YAMAMOTO Naoki
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -563,7 +563,7 @@ APIEXPORT int send_header(SOCKET socket, struct http_header_t* hdr)
     }
 
     for (i = 0; i < hdr->count; i++) {
-        if (mb_append(mb, hdr->vt[i].name, strlen(hdr->vt[i].name)) < 0) {
+        if (mb_append(mb, hdr->vt[i].name, (int)strlen(hdr->vt[i].name)) < 0) {
             mb_free(mb);
             return -1;
         }
@@ -571,7 +571,7 @@ APIEXPORT int send_header(SOCKET socket, struct http_header_t* hdr)
             mb_free(mb);
             return -1;
         }
-        if (mb_append(mb, hdr->vt[i].value, strlen(hdr->vt[i].value)) < 0) {
+        if (mb_append(mb, hdr->vt[i].value, (int)strlen(hdr->vt[i].value)) < 0) {
             mb_free(mb);
             return -1;
         }

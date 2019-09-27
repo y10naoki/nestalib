@@ -134,7 +134,7 @@ static int send_length_string(SOCKET socket, const char* str)
 static int send_cmd(SOCKET socket, const char* cmd, const char* zone, const char* skey)
 {
     /* コマンドの送信 */
-    if (send_data(socket, cmd, strlen(cmd)) < 0)
+    if (send_data(socket, cmd, (int)strlen(cmd)) < 0)
         return -1;
     /* ゾーン名を送信します。*/
     if (send_length_string(socket, zone) < 0)

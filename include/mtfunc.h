@@ -2,7 +2,7 @@
 /*
  * The MIT License
  *
- * Copyright (c) 2008-2011 YAMAMOTO Naoki
+ * Copyright (c) 2008-2019 YAMAMOTO Naoki
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -40,8 +40,8 @@
 extern "C" {
 #endif
 
-APIEXPORT void mt_initialize();
-APIEXPORT void mt_finalize();
+APIEXPORT void mt_initialize(void);
+APIEXPORT void mt_finalize(void);
 APIEXPORT void mt_localtime(const time_t* timebuf, struct tm* dest);
 APIEXPORT void mt_gmtime(const time_t* timebuf, struct tm* dest);
 APIEXPORT void mt_inet_ntoa(struct in_addr saddr, char* dest);

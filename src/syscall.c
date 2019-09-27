@@ -2,7 +2,7 @@
 /*
  * The MIT License
  *
- * Copyright (c) 2008-2011 YAMAMOTO Naoki
+ * Copyright (c) 2008-2019 YAMAMOTO Naoki
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -39,7 +39,7 @@ int safe_write(int fd, const void* buf, int count)
     while (p < endp) {
         int num_bytes;
 
-        SAFE_SYSCALL(num_bytes, write(fd, p, endp - p));
+        SAFE_SYSCALL(num_bytes, (int)write(fd, p, endp - p));
         if (num_bytes < 0) {
             err_write("safe_write(): write failed, %s", strerror(errno));
             break;
@@ -67,7 +67,7 @@ int safe_send(int s, const void* msg, int len, unsigned int flags)
     while (p < endp) {
         int num_bytes;
 
-        SAFE_SYSCALL(num_bytes, send(s, p, endp - p, flags));
+        SAFE_SYSCALL(num_bytes, (int)send(s, p, endp - p, flags));
         if (num_bytes < 0) {
             err_write("safe_send(): send failed, %s", strerror(errno));
             break;

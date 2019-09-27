@@ -2,7 +2,7 @@
 /*
  * The MIT License
  *
- * Copyright (c) 2011 YAMAMOTO Naoki
+ * Copyright (c) 2011-2019 YAMAMOTO Naoki
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -35,7 +35,7 @@ static int sockbuf_recv(struct sock_buf_t* sb)
 {
     int recv_len;
 
-    SAFE_SYSCALL(recv_len, recv(sb->socket, sb->buf, sb->bufsize, 0));
+    SAFE_SYSCALL(recv_len, (int)recv(sb->socket, sb->buf, sb->bufsize, 0));
     if (recv_len < 0)
         return -1;
     if (recv_len == 0)
@@ -335,7 +335,7 @@ APIEXPORT int sockbuf_gets(struct sock_buf_t* sb,
     int delim_len;
 
     rest_size = size - 1;
-    delim_len = strlen(delim);
+    delim_len = (int)strlen(delim);
     *found_flag = 0;
 
     while (rest_size > 0) {
@@ -372,5 +372,5 @@ APIEXPORT int sockbuf_gets(struct sock_buf_t* sb,
             break;
         }
     }
-    return strlen(buf);
+    return (int)strlen(buf);
 }

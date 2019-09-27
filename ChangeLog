@@ -1,0 +1,56 @@
+2011/10/22
+    - change: bdb.c hdb.c
+	remove set_default() in xxx_close() function.
+
+2011/10/16
+    - bug fix: bdb.c
+        changed cursor_get_current() duplicate keys mode.
+
+2011/02/11(0.9.4)
+    - bug fix: hash.c
+        changed 'strncmp' of get_element() into 'strcmp' by the comparison of the key.
+
+    - add sockbuf.c functions.
+        struct sock_buf_t* sockbuf_alloc(SOCKET socket);
+        void sockbuf_free(struct sock_buf_t* sb);
+        int sockbuf_wait_data(struct sock_buf_t* sb, int timeout_ms);
+        int sockbuf_read(struct sock_buf_t* sb, char* buf, int size);
+        int sockbuf_nchar(struct sock_buf_t* sb, char* buf, int size);
+        short sockbuf_short(struct sock_buf_t* sb, int* status);
+        int sockbuf_int(struct sock_buf_t* sb, int* status);
+        int64 sockbuf_int64(struct sock_buf_t* sb, int* status);
+        int sockbuf_gets(struct sock_buf_t* sb, char* buf, int size, const char* delim, int delim_add_flag, int* found_flag);
+
+2011/01/08(0.9.3)
+    - add sockevent.c functions.
+        void* sock_event_create();
+        int sock_event_add(const void* sev, SOCKET socket);
+        int sock_event_delete(const void* sev, SOCKET socket);
+        int sock_event_disable(const void* sev, SOCKET socket);
+        int sock_event_enable(const void* sev, SOCKET socket);
+        void sock_event_loop(const void* sev, const SOCK_EVENT_CB cbfuncs, const SOCK_EVENT_BREAK_CB breakfunc);
+        void sock_event_close(const void* sev);
+
+2010/12/13(0.9.2)
+    - add recv_nchar() function.
+    - add functions.
+        hdb_aget(), hdb_agets(), bdb_aget()
+        nio_aget(), nio_agets()
+    - change sockevent callback function.
+        add SOCKET argument
+        typedef int (*SOCK_EVENT_CB)(SOCKET socket);
+    - add SO_REUSEADDR option for sock_connect_server().
+    - bug fix: mmap.c
+        processing when file size was big,
+        and it was not assigned to 'mmap' was not right.
+    - change function for 64-bit: nestalib.h
+        lseek() to lseek64()
+        ftruncate() to ftruncate64()
+
+2010/10/30(0.9.1)
+    - add functions.
+        hdb_bset(), nio_bset()
+    - remove json.c json,h
+
+2010/09/25(0.9.0)
+    - first release.

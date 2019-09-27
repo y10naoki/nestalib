@@ -187,7 +187,7 @@ APIEXPORT uint system_seconds()
 #elif defined(MAC_OSX)
     struct timeval t;
     gettimeofday(&t, NULL);
-    return t.tv_sec;
+    return (uint)t.tv_sec;
 #else
     /* Linux */
     struct timespec ts;

@@ -135,7 +135,7 @@ APIEXPORT char* strrep(const char *src, const char* target, const char* rep, cha
         }
 
         /* 置換文字列をdstにコピー */
-        rlen = strlen(rep);
+        rlen = (int)strlen(rep);
         if (rlen > 0) {
             memcpy(d, rep, rlen);
             d += rlen;
@@ -184,7 +184,7 @@ APIEXPORT int strstrc(const char* str, const char* target)
     int n = 0;
 
     p = (char*)str;
-    tlen = strlen(target);
+    tlen = (int)strlen(target);
 
     while (*p) {
         p = strstr(p, target);
@@ -245,7 +245,7 @@ APIEXPORT int lastindexof(const char* str, const char target)
 {
     int i, len;
 
-    len = strlen(str);
+    len = (int)strlen(str);
     i = len - 1;
     str += i;
     while (i >= 0) {
@@ -309,7 +309,7 @@ APIEXPORT char* substr(char* dst, const char* src, int index, int len)
     int n;
 
     if (len < 0)
-        n = strlen(src) - index;
+        n = (int)strlen(src) - index;
     else
         n = len;
 
@@ -425,7 +425,7 @@ APIEXPORT char* trim(char* str)
     int i, len;
     char* p;
 
-    len = strlen(str);
+    len = (int)strlen(str);
     i = len - 1;
     p = str + i;
     while (i >= 0) {
@@ -442,7 +442,7 @@ APIEXPORT char* trim(char* str)
     while (*p) {
         if (*p > 0x20) {
             if (i > 0) {
-                len = strlen(p);
+                len = (int)strlen(p);
                 memmove(str, p, len);
                 str[len] = '\0';
             }
@@ -486,7 +486,7 @@ APIEXPORT char* quote(char* str)
     int len;
     char* p;
 
-    len = strlen(str);
+    len = (int)strlen(str);
     p = str + len  - 1;
     if (*p == '\"') {
         *p = '\0';

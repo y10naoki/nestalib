@@ -2,7 +2,7 @@
 /*
  * The MIT License
  *
- * Copyright (c) 2008-2011 YAMAMOTO Naoki
+ * Copyright (c) 2008-2019 YAMAMOTO Naoki
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -416,7 +416,7 @@ APIEXPORT struct template_t* tpl_reopen(struct template_t* tpl)
     /* テンプレートファイル構造体からコピーします。*/
     strncpy(tpl2->dir_name, tpl->dir_name, sizeof(tpl2->dir_name)-1);
     strncpy(tpl2->file_name, tpl->file_name, sizeof(tpl2->file_name)-1);
-    if (tpl->file_enc != NULL)
+    if (strlen(tpl->file_enc) > 0)
         strncpy(tpl2->file_enc, tpl->file_enc, sizeof(tpl2->file_enc)-1);
     tpl2->file_size = tpl->file_size;
     tpl2->replace_flag = tpl->replace_flag;
@@ -743,12 +743,12 @@ static int do_place_holder(struct template_t* tpl)
                 if (n > 0) {
                     int msize;
 
-                    msize = (strlen(v->value) - strlen(ph)) * n;
+                    msize = (int)(strlen(v->value) - strlen(ph)) * n;
                     if (msize > 0) {
                         int new_size;
                         char* dst;
 
-                        new_size = strlen(o->value) + msize + 1;
+                        new_size = (int)strlen(o->value) + msize + 1;
                         dst = (char*)malloc(new_size);
                         if (dst == NULL) {
                             err_write("template: no memory, tpl_render()");
@@ -827,7 +827,7 @@ static char* place_holder_array(struct template_t* tpl, struct tpl_object_t* o, 
         if (strstr(src, ph)) {
             int cur_len;
 
-            cur_len = strlen(src);
+            cur_len = (int)strlen(src);
             /* 配列の値を取得します。*/
             if (index < v->array_size) {
                 int n;
@@ -836,7 +836,7 @@ static char* place_holder_array(struct template_t* tpl, struct tpl_object_t* o, 
 
                 n = strstrc(src, ph);
                 aval = v->val_array[index];
-                new_len = cur_len - (strlen(ph) * n) + (strlen(aval) * n);
+                new_len = (int)(cur_len - (strlen(ph) * n) + (strlen(aval) * n));
                 dst = (char*)alloca(new_len+1);
                 strrep(src, ph, aval, dst);
             } else {
@@ -968,7 +968,7 @@ static struct tpl_object_t* repeat(struct template_t* tpl, struct tpl_object_t* 
                 }
             } else {
                 /* 元のノードのクローンを作成します。*/
-                int osize = sizeof(struct tpl_object_t) + strlen(o->value) + 1;
+                int osize = (int)(sizeof(struct tpl_object_t) + strlen(o->value) + 1);
                 new_o = (struct tpl_object_t*)malloc(osize);
                 if (new_o == NULL) {
                     err_write("template: no memory, tpl_render()");
@@ -1076,8 +1076,8 @@ static int do_replace(struct template_t* tpl)
             /* 検索文字列と置換文字列を抽出します。*/
             replace_word(o->value, search_str, rep_str);
 
-            search_len = strlen(search_str);
-            rep_len = strlen(rep_str);
+            search_len = (int)strlen(search_str);
+            rep_len = (int)strlen(rep_str);
 
             /* 現在行以降に対して置換処理を行ないます。*/
             o2 = o->next;
@@ -1115,7 +1115,7 @@ static int do_replace(struct template_t* tpl)
                                 strrep(o2->value, search_str, rep_str, dst);
 
                                 /* ノードの大きさを拡張します。*/
-                                new_size = sizeof(struct tpl_object_t) + strlen(o2->value) + inc_size + 1;
+                                new_size = (int)(sizeof(struct tpl_object_t) + strlen(o2->value) + inc_size + 1);
                                 tp = (char*)realloc(o2, new_size);
                                 if (tp == NULL) {
                                     err_write("template: no memory, tpl_render()");
@@ -1287,7 +1287,7 @@ static char* tpl_xstrcat(struct template_t* tpl, char* s)
         *tpl->out_data = '\0';
     }
 
-    len = strlen(s);
+    len = (int)strlen(s);
     if (tpl->out_size + len + 1 > tpl->out_alloc_size) {
         char* t;
         int alloc_size;
@@ -1350,7 +1350,7 @@ APIEXPORT char* tpl_get_data(struct template_t* tpl,
         o = o->next;
     }
 
-    if (tpl->file_enc != NULL && out_encoding != NULL) {
+    if (strlen(tpl->file_enc) > 0 && out_encoding != NULL) {
         if (stricmp(tpl->file_enc, out_encoding)) {
             int osize;
             char* buff;

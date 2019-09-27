@@ -2,7 +2,7 @@
 /*
  * The MIT License
  *
- * Copyright (c) 2008-2011 YAMAMOTO Naoki
+ * Copyright (c) 2008-2019 YAMAMOTO Naoki
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -32,7 +32,7 @@
 
 /*
  * OUTPUT FILE FORMAT:
- *   logout(): [DATE TIME] MESSAGE<LF>
+ *   logout_write(): [DATE TIME] MESSAGE<LF>
  */
 
 static int out_fd = -1;
@@ -77,10 +77,10 @@ static void output(const char* buf)
     if (out_fd < 0)
         fprintf(stdout, "%s", outbuf);
     else
-        FILE_WRITE(out_fd, outbuf, strlen(outbuf));
+        FILE_WRITE(out_fd, outbuf, (int)strlen(outbuf));
 }
 
-APIEXPORT void logout(const char* fmt, ...)
+APIEXPORT void logout_write(const char* fmt, ...)
 {
     char outbuf[1024];
     va_list argptr;

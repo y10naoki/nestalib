@@ -123,7 +123,7 @@ static char* create_session_id(char* sid,
     strcat(sid, abuf);
 
     /* ゾーン名を16進数文字列に変換します。*/
-    tohex(hexzone, zs->zone_name, strlen(zs->zone_name));
+    tohex(hexzone, zs->zone_name, (int)strlen(zs->zone_name));
 
     /* ゾーン名のサイズを16進数文字列に変換します。*/
     size = (ushort)strlen(hexzone);
@@ -158,7 +158,7 @@ static int sid_to_skey(struct zone_session_t* zs,
 {
     int len;
 
-    len = strlen(sid);
+    len = (int)strlen(sid);
     if (len < SESSION_KEY_SIZE) {
         err_write("session: illegal sid=%s.", sid);
         return -1;
@@ -196,7 +196,7 @@ static ulong sid_to_ip(struct zone_session_t* zs,
 {
     int len;
 
-    len = strlen(sid);
+    len = (int)strlen(sid);
     if (len < SESSION_KEY_SIZE + IPADDR_SIZE + PORTNO_SIZE) {
         err_write("session: illegal sid=%s.", sid);
         return 0;
@@ -262,7 +262,7 @@ static void sid_to_zone(struct zone_session_t* zs,
     int len;
 
     *zname = '\0';
-    len = strlen(sid);
+    len = (int)strlen(sid);
     if (len < SESSION_KEY_SIZE + IPADDR_SIZE + PORTNO_SIZE + ZONENAME_SIZE) {
         err_write("session: illegal sid=%s.", sid);
         return;
@@ -917,7 +917,7 @@ APIEXPORT void* ssn_get(struct session_t* s, const char* key)
  */
 APIEXPORT void ssn_put(struct session_t* s, const char* key, const char* str)
 {
-    ssn_putdata(s, key, str, strlen(str)+1);
+    ssn_putdata(s, key, str, (int)strlen(str)+1);
 }
 
 /*

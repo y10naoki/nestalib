@@ -60,7 +60,7 @@ static int smtp_protocol(struct smtp_session_t* smtp,
 {
     if (send_buf != NULL) {
         /* サーバーへデータを送信します。*/
-        if (send_data(smtp->c_socket, send_buf, strlen(send_buf)) < 0) {
+        if (send_data(smtp->c_socket, send_buf, (int)strlen(send_buf)) < 0) {
             err_write("smtp_protocol error: [%s] %s", smtp->server, strerror(errno));
             return -1;
         }
@@ -75,7 +75,7 @@ static int smtp_protocol(struct smtp_session_t* smtp,
             return -1;
         }
         /* サーバーから応答データを受信します。*/
-        recv_size = recv(smtp->c_socket, recv_buf, recv_buf_size, 0);
+        recv_size = (int)recv(smtp->c_socket, recv_buf, recv_buf_size, 0);
         if (recv_size < 0)
             return -1;
         if (check_status != NULL)

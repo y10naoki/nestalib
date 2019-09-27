@@ -2,7 +2,7 @@
 /*
  * The MIT License
  *
- * Copyright (c) 2008-2011 YAMAMOTO Naoki
+ * Copyright (c) 2008-2019 YAMAMOTO Naoki
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -46,7 +46,7 @@ struct queue_t {
 extern "C" {
 #endif
 
-APIEXPORT struct queue_t* que_initialize();
+APIEXPORT struct queue_t* que_initialize(void);
 APIEXPORT void que_finalize(struct queue_t* que);
 APIEXPORT int que_empty(struct queue_t* que);
 APIEXPORT int que_push(struct queue_t* que, void* data);

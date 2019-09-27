@@ -2,7 +2,7 @@
 /*
  * The MIT License
  *
- * Copyright (c) 2008-2011 YAMAMOTO Naoki
+ * Copyright (c) 2008-2019 YAMAMOTO Naoki
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -375,7 +375,7 @@ APIEXPORT char* url_post(const char* url,
         }
 #endif
     } else {
-        if (send_data(c_socket, send_buf, strlen(send_buf)) < 0) {
+        if (send_data(c_socket, send_buf, (int)strlen(send_buf)) < 0) {
             err_write("send error url: %s %s [%s]", url, strerror(errno), send_buf);
             goto final;
         }

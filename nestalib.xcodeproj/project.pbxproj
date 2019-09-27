@@ -158,6 +158,23 @@
 		CE60E939233CA3EF004FB46B /* req_heap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = req_heap.c; path = src/req_heap.c; sourceTree = "<group>"; };
 		CE60E93A233CA3EF004FB46B /* recv.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = recv.c; path = src/recv.c; sourceTree = "<group>"; };
 		CE60E93B233CA3EF004FB46B /* request.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = request.c; path = src/request.c; sourceTree = "<group>"; };
+		CE69DBA7233DC85600F088AF /* config.h.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = config.h.in; sourceTree = "<group>"; };
+		CE69DBA8233DC85600F088AF /* install-sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "install-sh"; sourceTree = "<group>"; };
+		CE69DBA9233DC85600F088AF /* aclocal.m4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = aclocal.m4; sourceTree = "<group>"; };
+		CE69DBAA233DC85600F088AF /* Makefile.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.in; sourceTree = "<group>"; };
+		CE69DBAB233DC85600F088AF /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		CE69DBAC233DC85600F088AF /* configure */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = configure; sourceTree = "<group>"; };
+		CE69DBAD233DC85600F088AF /* AUTHORS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AUTHORS; sourceTree = "<group>"; };
+		CE69DBAE233DC85700F088AF /* ChangeLog */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChangeLog; sourceTree = "<group>"; };
+		CE69DBAF233DC85700F088AF /* libtool */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = libtool; sourceTree = "<group>"; };
+		CE69DBB0233DC85700F088AF /* NEWS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NEWS; sourceTree = "<group>"; };
+		CE69DBB1233DC85700F088AF /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
+		CE69DBB2233DC85700F088AF /* depcomp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = depcomp; sourceTree = "<group>"; };
+		CE69DBB3233DC85700F088AF /* Makefile.am */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.am; sourceTree = "<group>"; };
+		CE69DBB4233DC85700F088AF /* INSTALL */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = INSTALL; sourceTree = "<group>"; };
+		CE69DBB5233DC85700F088AF /* autom4te.cache */ = {isa = PBXFileReference; lastKnownFileType = folder; path = autom4te.cache; sourceTree = "<group>"; };
+		CE69DBB6233DC85700F088AF /* missing */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = missing; sourceTree = "<group>"; };
+		CE69DBB7233DC85800F088AF /* configure.ac */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = configure.ac; sourceTree = "<group>"; };
 		CEB8B907233B5BC600AE9D27 /* libnestalib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libnestalib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -207,10 +224,9 @@
 			name = include;
 			sourceTree = "<group>";
 		};
-		CEB8B8FE233B5BC600AE9D27 = {
+		CE69DBA5233DC7D900F088AF /* src */ = {
 			isa = PBXGroup;
 			children = (
-				CE60E8D5233CA369004FB46B /* include */,
 				CE60E930233CA3ED004FB46B /* base64.c */,
 				CE60E911233CA3EA004FB46B /* bdb.c */,
 				CE60E91B233CA3EB004FB46B /* btcache.c */,
@@ -257,6 +273,40 @@
 				CE60E91A233CA3EA004FB46B /* vector.c */,
 				CE60E925233CA3EC004FB46B /* xml.c */,
 				CE60E927233CA3EC004FB46B /* zlibutil.c */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		CE69DBA6233DC83800F088AF /* autotools */ = {
+			isa = PBXGroup;
+			children = (
+				CE69DBA9233DC85600F088AF /* aclocal.m4 */,
+				CE69DBAD233DC85600F088AF /* AUTHORS */,
+				CE69DBB5233DC85700F088AF /* autom4te.cache */,
+				CE69DBAE233DC85700F088AF /* ChangeLog */,
+				CE69DBA7233DC85600F088AF /* config.h.in */,
+				CE69DBAC233DC85600F088AF /* configure */,
+				CE69DBB7233DC85800F088AF /* configure.ac */,
+				CE69DBB1233DC85700F088AF /* COPYING */,
+				CE69DBB2233DC85700F088AF /* depcomp */,
+				CE69DBB4233DC85700F088AF /* INSTALL */,
+				CE69DBA8233DC85600F088AF /* install-sh */,
+				CE69DBAF233DC85700F088AF /* libtool */,
+				CE69DBB3233DC85700F088AF /* Makefile.am */,
+				CE69DBAA233DC85600F088AF /* Makefile.in */,
+				CE69DBB6233DC85700F088AF /* missing */,
+				CE69DBB0233DC85700F088AF /* NEWS */,
+				CE69DBAB233DC85600F088AF /* README */,
+			);
+			name = autotools;
+			sourceTree = "<group>";
+		};
+		CEB8B8FE233B5BC600AE9D27 = {
+			isa = PBXGroup;
+			children = (
+				CE69DBA6233DC83800F088AF /* autotools */,
+				CE69DBA5233DC7D900F088AF /* src */,
+				CE60E8D5233CA369004FB46B /* include */,
 				CEB8B908233B5BC600AE9D27 /* Products */,
 			);
 			sourceTree = "<group>";

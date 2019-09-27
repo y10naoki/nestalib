@@ -2,7 +2,7 @@
 /*
  * The MIT License
  *
- * Copyright (c) 2008-2011 YAMAMOTO Naoki
+ * Copyright (c) 2008-2019 YAMAMOTO Naoki
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -78,7 +78,7 @@ static void output(const char* buf)
     if (err_fd < 0)
         fprintf(stderr, "%s", outbuf);
     else
-        FILE_WRITE(err_fd, outbuf, strlen(outbuf));
+        FILE_WRITE(err_fd, outbuf, (int)strlen(outbuf));
 }
 
 APIEXPORT void err_write(const char* fmt, ...)

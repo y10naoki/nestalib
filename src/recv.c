@@ -2,7 +2,7 @@
 /*
  * The MIT License
  *
- * Copyright (c) 2008-2011 YAMAMOTO Naoki
+ * Copyright (c) 2008-2019 YAMAMOTO Naoki
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -126,7 +126,7 @@ APIEXPORT char* recv_data(SOCKET socket, int check_size, int timeout_ms, void* s
             recv_len = SSL_read((SSL*)ssl, buff, sizeof(buff));
         else
 #endif
-        SAFE_SYSCALL(recv_len, recv(socket, buff, sizeof(buff), 0));
+        SAFE_SYSCALL(recv_len, (int)recv(socket, buff, sizeof(buff), 0));
 
         if (recv_len < 0) {
             if (req_ptr)
@@ -242,7 +242,7 @@ APIEXPORT int recv_char(SOCKET socket, char* buf, int bufsize, int* status)
     int recv_len;
 
     *status = 0;
-    SAFE_SYSCALL(recv_len, recv(socket, buf, bufsize, 0));
+    SAFE_SYSCALL(recv_len, (int)recv(socket, buf, bufsize, 0));
     if (recv_len < 0) {
         *status = -1;
         return 0;
@@ -305,7 +305,7 @@ APIEXPORT short recv_short(SOCKET socket, int* status)
     int recv_len;
 
     *status = 0;
-    SAFE_SYSCALL(recv_len, recv(socket, (char*)&data, sizeof(short), 0));
+    SAFE_SYSCALL(recv_len, (int)recv(socket, (char*)&data, sizeof(short), 0));
     if (recv_len < 0) {
         *status = -1;
         return 0;
@@ -337,7 +337,7 @@ APIEXPORT int recv_int(SOCKET socket, int* status)
     int recv_len;
 
     *status = 0;
-    SAFE_SYSCALL(recv_len, recv(socket, (char*)&data, sizeof(int), 0));
+    SAFE_SYSCALL(recv_len, (int)recv(socket, (char*)&data, sizeof(int), 0));
     if (recv_len < 0) {
         *status = -1;
         return 0;
@@ -369,7 +369,7 @@ APIEXPORT int64 recv_int64(SOCKET socket, int* status)
     int recv_len;
 
     *status = 0;
-    SAFE_SYSCALL(recv_len, recv(socket, (char*)&data, sizeof(int64), 0));
+    SAFE_SYSCALL(recv_len, (int)recv(socket, (char*)&data, sizeof(int64), 0));
     if (recv_len < 0) {
         *status = -1;
         return 0;
@@ -409,7 +409,7 @@ APIEXPORT int recv_line(SOCKET socket, char* buf, int bufsize, const char* delim
         char c;
         int recv_len;
 
-        SAFE_SYSCALL(recv_len, recv(socket, &c, sizeof(char), 0));
+        SAFE_SYSCALL(recv_len, (int)recv(socket, &c, sizeof(char), 0));
 
         if (recv_len < 0)
             return -1;
@@ -435,7 +435,7 @@ APIEXPORT int recv_line(SOCKET socket, char* buf, int bufsize, const char* delim
             }
         }
     }
-    return strlen(buf);
+    return (int)strlen(buf);
 }
 
 /*
@@ -471,7 +471,7 @@ APIEXPORT char* recv_str(SOCKET socket, const char* delimiter, int delim_add_fla
         char rbuf[BUF_SIZE];
         int recv_len;
 
-        SAFE_SYSCALL(recv_len, recv(socket, rbuf, sizeof(rbuf), 0));
+        SAFE_SYSCALL(recv_len, (int)recv(socket, rbuf, sizeof(rbuf), 0));
 
         if (recv_len < 0) {
             free(buf);

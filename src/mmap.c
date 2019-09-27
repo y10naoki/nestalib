@@ -2,7 +2,7 @@
 /*
  * The MIT License
  *
- * Copyright (c) 2008-2011 YAMAMOTO Naoki
+ * Copyright (c) 2008-2019 YAMAMOTO Naoki
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -193,7 +193,7 @@ static int mf_write(struct mmap_t* map, const void* data, size_t size, int64 sta
     } else {
         if (start >= map->size) {
             FILE_SEEK(map->fd, start, SEEK_SET);
-            if (FILE_WRITE(map->fd, data, size) != size)
+            if (FILE_WRITE(map->fd, data, (int)size) != size)
                 return -1;
         } else {
             size_t m, f;
@@ -204,7 +204,7 @@ static int mf_write(struct mmap_t* map, const void* data, size_t size, int64 sta
             /* write on file */
             f = (size_t)(last - map->size);
             FILE_SEEK(map->fd, map->view_offset + map->size, SEEK_SET);
-            if (FILE_WRITE(map->fd, (char*)data+m, f) != f)
+            if (FILE_WRITE(map->fd, (char*)data+m, (int)f) != f)
                 return -1;
         }
     }
@@ -291,7 +291,7 @@ APIEXPORT struct mmap_t* mmap_open(int fd, int map_mode, int64 map_size)
         if (map_size == MMAP_AUTO_SIZE)
             result = mmap_auto_resize_open(map, 0);
         if (result == 0) {
-            logout("mmap_open: mmap resize=%lld to %lld", map->real_size, map->view_size);
+            logout_write("mmap_open: mmap resize=%lld to %lld", map->real_size, map->view_size);
         } else {
             free(map);
             err_write("mmap_open: can't allocate memory map, size=%lld", map->real_size);

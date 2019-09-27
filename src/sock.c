@@ -212,7 +212,7 @@ APIEXPORT SOCKET sock_listen(ulong addr,
 #endif
 
     memset(sockaddr, '\0', sizeof(struct sockaddr_in));
-    sockaddr->sin_addr.s_addr = addr;
+    sockaddr->sin_addr.s_addr = (in_addr_t)addr;
     sockaddr->sin_port        = htons(port);
     sockaddr->sin_family      = AF_INET;
 

@@ -174,7 +174,7 @@ APIEXPORT int head_handler(SOCKET socket, int* content_size)
     now_gmtstr(now_date, sizeof(now_date));
 
     snprintf(send_buff, sizeof(send_buff), head_template, now_date, SERVER_NAME);
-    send_data(socket, send_buff, strlen(send_buff));
+    send_data(socket, send_buff, (int)strlen(send_buff));
     *content_size = 0;
     return HTTP_OK;
 }
@@ -195,13 +195,13 @@ APIEXPORT int forward_handler(SOCKET socket, int http_status, int* content_size)
             break;
 
         default:    /* HTTP_INTERNAL_SERVER_ERROR */
-            *content_size = strlen(err_html_500);
+            *content_size = (int)strlen(err_html_500);
             snprintf(send_buff, sizeof(send_buff), err_template_500,
                      now_date, SERVER_NAME, *content_size, err_html_500);
             break;
     }
 
-    send_data(socket, send_buff, strlen(send_buff));
+    send_data(socket, send_buff, (int)strlen(send_buff));
     return http_status;
 }
 
@@ -247,9 +247,9 @@ APIEXPORT int error_handler(SOCKET socket, int http_status, int* content_size)
     /* 現在時刻をGMTで取得 */
     now_gmtstr(now_date, sizeof(now_date));
 
-    *content_size = strlen(html);
+    *content_size = (int)strlen(html);
     snprintf(send_buff, sizeof(send_buff), temp,
              now_date, SERVER_NAME, *content_size, html);
-    send_data(socket, send_buff, strlen(send_buff));
+    send_data(socket, send_buff, (int)strlen(send_buff));
     return http_status;
 }

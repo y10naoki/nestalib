@@ -2,7 +2,7 @@
 /*
  * The MIT License
  *
- * Copyright (c) 2008-2011 YAMAMOTO Naoki
+ * Copyright (c) 2008-2019 YAMAMOTO Naoki
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -578,7 +578,7 @@ static struct membuf_t* select_key_list(struct sock_event_t* seve)
         return NULL;
     }
     while (key_list[i]) {
-        if (mb_append(mb, key_list[i], strlen(key_list[i]) + 1) < 0) {
+        if (mb_append(mb, key_list[i], (int)strlen(key_list[i]) + 1) < 0) {
             mb_free(mb);
             hash_list_free((void**)key_list);
             err_write("select_key_list: no memory.");

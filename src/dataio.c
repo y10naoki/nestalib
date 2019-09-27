@@ -2,7 +2,7 @@
 /*
  * The MIT License
  *
- * Copyright (c) 2008-2011 YAMAMOTO Naoki
+ * Copyright (c) 2008-2019 YAMAMOTO Naoki
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -326,7 +326,7 @@ static long reuse_space(struct dio_data_t* btdat, int size, int* areasize)
 APIEXPORT long dio_avail_space(struct dio_data_t* btdat, int size)
 {
     long ptr = -1;
-    int areasize;
+    int areasize = 0;
 
     if (btdat->freeptr != 0) {
         /* 空き領域管理ページから再利用できる領域を検索します。*/

@@ -89,7 +89,7 @@ APIEXPORT void mt_inet_addr(unsigned long ip, char* dest)
 {
     struct in_addr addr;
 
-    addr.s_addr = ip;
+    addr.s_addr = (in_addr_t)ip;
     mt_inet_ntoa(addr, dest);
 }
 
