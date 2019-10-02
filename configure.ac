@@ -4,7 +4,7 @@
 AC_PREREQ(2.61)
 AC_INIT(nestalib, 0.9.5, y10naoki@gmail.com)
 AM_INIT_AUTOMAKE($PACKAGE_NAME, $PACKAGE_VERSION)
-AC_CONFIG_SRCDIR([nio.c])
+AC_CONFIG_SRCDIR([src/nio.c])
 AC_CONFIG_HEADER([config.h])
 
 # Initialize prefix.
@@ -21,6 +21,7 @@ AC_PROG_LIBTOOL
 # Checks for header files.
 AC_HEADER_STDC
 AC_CHECK_HEADERS([arpa/inet.h fcntl.h limits.h memory.h netdb.h netinet/in.h stdlib.h string.h sys/socket.h sys/timeb.h unistd.h])
+AC_CHECK_HEADERS([sys/time.h])
 
 # checks for args.
 AC_ARG_WITH([libxml],
@@ -63,7 +64,7 @@ AC_FUNC_REALLOC
 AC_FUNC_SELECT_ARGTYPES
 AC_FUNC_STAT
 AC_FUNC_STRFTIME
-AC_CHECK_FUNCS([clock_gettime gethostbyaddr gethostbyname getpagesize gettimeofday inet_ntoa memmove memset munmap select socket strchr strerror strstr])
+AC_CHECK_FUNCS([clock_gettime gettimeofday gethostbyaddr gethostbyname getpagesize inet_ntoa memmove memset munmap select socket strchr strerror strstr])
 AC_CHECK_FUNCS([iconv])
 AC_CHECK_FUNC([epoll_create],
   [AC_DEFINE([HAVE_EPOLL], 1, [Define if your system supports the epoll system call])], [])

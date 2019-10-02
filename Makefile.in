@@ -287,19 +287,18 @@ top_srcdir = @top_srcdir@
 RELEASE = 0.9.5
 VERSION_INFO = 0:5:0
 BUILT_SOURCES = nestalib-config.h
-CORE_SRC = base64.c    bdb.c       btcache.c btio.c \
-           btree.c     cgiutils.c  dataio.c  datetime.c \
-           error.c     fcache.c    handler.c hash.c \
-           hdb.c       header.c    logout.c \
-           md5.c       md5c.c      memutil.c mime.c \
-           mmap.c      mtfunc.c    nio.c     ociio.c \
-           pgsql.c     pool.c      query.c   queue.c \
-           recv.c      req_heap.c  request.c response.c \
-           send.c      session.c   smtp_client.c sock.c \
-           sockevent.c srelay_client.c strutil.c syscall.c \
-           template.c  url.c      user_param.c vector.c \
-           sockbuf.c xml.c zlibutil.c \
-           nestalib.vcproj
+CORE_SRC = src/base64.c    src/bdb.c       src/btcache.c src/btio.c \
+           src/btree.c     src/cgiutils.c  src/dataio.c  src/datetime.c \
+           src/error.c     src/fcache.c    src/handler.c src/hash.c \
+           src/hdb.c       src/header.c    src/logout.c \
+           src/md5.c       src/md5c.c      src/memutil.c src/mime.c \
+           src/mmap.c      src/mtfunc.c    src/nio.c     src/ociio.c \
+           src/pgsql.c     src/pool.c      src/query.c   src/queue.c \
+           src/recv.c      src/req_heap.c  src/request.c src/response.c \
+           src/send.c      src/session.c   src/smtp_client.c src/sock.c \
+           src/sockevent.c src/srelay_client.c src/strutil.c src/syscall.c \
+           src/template.c  src/url.c       src/user_param.c  src/vector.c \
+           src/sockbuf.c   src/xml.c       src/zlibutil.c
 
 INC_HDR = include/apiexp.h include/bdb.h include/btree.h include/cgiutils.h \
           include/csect.h include/dataio.h include/expapi.h include/fcache.h \
@@ -482,327 +481,327 @@ distclean-compile:
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(LTCOMPILE) -c -o $@ $<
 
-libnesta_la-base64.lo: base64.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-base64.lo -MD -MP -MF $(DEPDIR)/libnesta_la-base64.Tpo -c -o libnesta_la-base64.lo `test -f 'base64.c' || echo '$(srcdir)/'`base64.c
+libnesta_la-base64.lo: src/base64.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-base64.lo -MD -MP -MF $(DEPDIR)/libnesta_la-base64.Tpo -c -o libnesta_la-base64.lo `test -f 'src/base64.c' || echo '$(srcdir)/'`src/base64.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-base64.Tpo $(DEPDIR)/libnesta_la-base64.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='base64.c' object='libnesta_la-base64.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/base64.c' object='libnesta_la-base64.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-base64.lo `test -f 'base64.c' || echo '$(srcdir)/'`base64.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-base64.lo `test -f 'src/base64.c' || echo '$(srcdir)/'`src/base64.c
 
-libnesta_la-bdb.lo: bdb.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-bdb.lo -MD -MP -MF $(DEPDIR)/libnesta_la-bdb.Tpo -c -o libnesta_la-bdb.lo `test -f 'bdb.c' || echo '$(srcdir)/'`bdb.c
+libnesta_la-bdb.lo: src/bdb.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-bdb.lo -MD -MP -MF $(DEPDIR)/libnesta_la-bdb.Tpo -c -o libnesta_la-bdb.lo `test -f 'src/bdb.c' || echo '$(srcdir)/'`src/bdb.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-bdb.Tpo $(DEPDIR)/libnesta_la-bdb.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='bdb.c' object='libnesta_la-bdb.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/bdb.c' object='libnesta_la-bdb.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-bdb.lo `test -f 'bdb.c' || echo '$(srcdir)/'`bdb.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-bdb.lo `test -f 'src/bdb.c' || echo '$(srcdir)/'`src/bdb.c
 
-libnesta_la-btcache.lo: btcache.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-btcache.lo -MD -MP -MF $(DEPDIR)/libnesta_la-btcache.Tpo -c -o libnesta_la-btcache.lo `test -f 'btcache.c' || echo '$(srcdir)/'`btcache.c
+libnesta_la-btcache.lo: src/btcache.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-btcache.lo -MD -MP -MF $(DEPDIR)/libnesta_la-btcache.Tpo -c -o libnesta_la-btcache.lo `test -f 'src/btcache.c' || echo '$(srcdir)/'`src/btcache.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-btcache.Tpo $(DEPDIR)/libnesta_la-btcache.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='btcache.c' object='libnesta_la-btcache.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/btcache.c' object='libnesta_la-btcache.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-btcache.lo `test -f 'btcache.c' || echo '$(srcdir)/'`btcache.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-btcache.lo `test -f 'src/btcache.c' || echo '$(srcdir)/'`src/btcache.c
 
-libnesta_la-btio.lo: btio.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-btio.lo -MD -MP -MF $(DEPDIR)/libnesta_la-btio.Tpo -c -o libnesta_la-btio.lo `test -f 'btio.c' || echo '$(srcdir)/'`btio.c
+libnesta_la-btio.lo: src/btio.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-btio.lo -MD -MP -MF $(DEPDIR)/libnesta_la-btio.Tpo -c -o libnesta_la-btio.lo `test -f 'src/btio.c' || echo '$(srcdir)/'`src/btio.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-btio.Tpo $(DEPDIR)/libnesta_la-btio.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='btio.c' object='libnesta_la-btio.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/btio.c' object='libnesta_la-btio.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-btio.lo `test -f 'btio.c' || echo '$(srcdir)/'`btio.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-btio.lo `test -f 'src/btio.c' || echo '$(srcdir)/'`src/btio.c
 
-libnesta_la-btree.lo: btree.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-btree.lo -MD -MP -MF $(DEPDIR)/libnesta_la-btree.Tpo -c -o libnesta_la-btree.lo `test -f 'btree.c' || echo '$(srcdir)/'`btree.c
+libnesta_la-btree.lo: src/btree.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-btree.lo -MD -MP -MF $(DEPDIR)/libnesta_la-btree.Tpo -c -o libnesta_la-btree.lo `test -f 'src/btree.c' || echo '$(srcdir)/'`src/btree.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-btree.Tpo $(DEPDIR)/libnesta_la-btree.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='btree.c' object='libnesta_la-btree.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/btree.c' object='libnesta_la-btree.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-btree.lo `test -f 'btree.c' || echo '$(srcdir)/'`btree.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-btree.lo `test -f 'src/btree.c' || echo '$(srcdir)/'`src/btree.c
 
-libnesta_la-cgiutils.lo: cgiutils.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-cgiutils.lo -MD -MP -MF $(DEPDIR)/libnesta_la-cgiutils.Tpo -c -o libnesta_la-cgiutils.lo `test -f 'cgiutils.c' || echo '$(srcdir)/'`cgiutils.c
+libnesta_la-cgiutils.lo: src/cgiutils.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-cgiutils.lo -MD -MP -MF $(DEPDIR)/libnesta_la-cgiutils.Tpo -c -o libnesta_la-cgiutils.lo `test -f 'src/cgiutils.c' || echo '$(srcdir)/'`src/cgiutils.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-cgiutils.Tpo $(DEPDIR)/libnesta_la-cgiutils.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cgiutils.c' object='libnesta_la-cgiutils.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/cgiutils.c' object='libnesta_la-cgiutils.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-cgiutils.lo `test -f 'cgiutils.c' || echo '$(srcdir)/'`cgiutils.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-cgiutils.lo `test -f 'src/cgiutils.c' || echo '$(srcdir)/'`src/cgiutils.c
 
-libnesta_la-dataio.lo: dataio.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-dataio.lo -MD -MP -MF $(DEPDIR)/libnesta_la-dataio.Tpo -c -o libnesta_la-dataio.lo `test -f 'dataio.c' || echo '$(srcdir)/'`dataio.c
+libnesta_la-dataio.lo: src/dataio.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-dataio.lo -MD -MP -MF $(DEPDIR)/libnesta_la-dataio.Tpo -c -o libnesta_la-dataio.lo `test -f 'src/dataio.c' || echo '$(srcdir)/'`src/dataio.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-dataio.Tpo $(DEPDIR)/libnesta_la-dataio.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='dataio.c' object='libnesta_la-dataio.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/dataio.c' object='libnesta_la-dataio.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-dataio.lo `test -f 'dataio.c' || echo '$(srcdir)/'`dataio.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-dataio.lo `test -f 'src/dataio.c' || echo '$(srcdir)/'`src/dataio.c
 
-libnesta_la-datetime.lo: datetime.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-datetime.lo -MD -MP -MF $(DEPDIR)/libnesta_la-datetime.Tpo -c -o libnesta_la-datetime.lo `test -f 'datetime.c' || echo '$(srcdir)/'`datetime.c
+libnesta_la-datetime.lo: src/datetime.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-datetime.lo -MD -MP -MF $(DEPDIR)/libnesta_la-datetime.Tpo -c -o libnesta_la-datetime.lo `test -f 'src/datetime.c' || echo '$(srcdir)/'`src/datetime.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-datetime.Tpo $(DEPDIR)/libnesta_la-datetime.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='datetime.c' object='libnesta_la-datetime.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/datetime.c' object='libnesta_la-datetime.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-datetime.lo `test -f 'datetime.c' || echo '$(srcdir)/'`datetime.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-datetime.lo `test -f 'src/datetime.c' || echo '$(srcdir)/'`src/datetime.c
 
-libnesta_la-error.lo: error.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-error.lo -MD -MP -MF $(DEPDIR)/libnesta_la-error.Tpo -c -o libnesta_la-error.lo `test -f 'error.c' || echo '$(srcdir)/'`error.c
+libnesta_la-error.lo: src/error.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-error.lo -MD -MP -MF $(DEPDIR)/libnesta_la-error.Tpo -c -o libnesta_la-error.lo `test -f 'src/error.c' || echo '$(srcdir)/'`src/error.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-error.Tpo $(DEPDIR)/libnesta_la-error.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='error.c' object='libnesta_la-error.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/error.c' object='libnesta_la-error.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-error.lo `test -f 'error.c' || echo '$(srcdir)/'`error.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-error.lo `test -f 'src/error.c' || echo '$(srcdir)/'`src/error.c
 
-libnesta_la-fcache.lo: fcache.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-fcache.lo -MD -MP -MF $(DEPDIR)/libnesta_la-fcache.Tpo -c -o libnesta_la-fcache.lo `test -f 'fcache.c' || echo '$(srcdir)/'`fcache.c
+libnesta_la-fcache.lo: src/fcache.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-fcache.lo -MD -MP -MF $(DEPDIR)/libnesta_la-fcache.Tpo -c -o libnesta_la-fcache.lo `test -f 'src/fcache.c' || echo '$(srcdir)/'`src/fcache.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-fcache.Tpo $(DEPDIR)/libnesta_la-fcache.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='fcache.c' object='libnesta_la-fcache.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/fcache.c' object='libnesta_la-fcache.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-fcache.lo `test -f 'fcache.c' || echo '$(srcdir)/'`fcache.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-fcache.lo `test -f 'src/fcache.c' || echo '$(srcdir)/'`src/fcache.c
 
-libnesta_la-handler.lo: handler.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-handler.lo -MD -MP -MF $(DEPDIR)/libnesta_la-handler.Tpo -c -o libnesta_la-handler.lo `test -f 'handler.c' || echo '$(srcdir)/'`handler.c
+libnesta_la-handler.lo: src/handler.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-handler.lo -MD -MP -MF $(DEPDIR)/libnesta_la-handler.Tpo -c -o libnesta_la-handler.lo `test -f 'src/handler.c' || echo '$(srcdir)/'`src/handler.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-handler.Tpo $(DEPDIR)/libnesta_la-handler.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='handler.c' object='libnesta_la-handler.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/handler.c' object='libnesta_la-handler.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-handler.lo `test -f 'handler.c' || echo '$(srcdir)/'`handler.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-handler.lo `test -f 'src/handler.c' || echo '$(srcdir)/'`src/handler.c
 
-libnesta_la-hash.lo: hash.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-hash.lo -MD -MP -MF $(DEPDIR)/libnesta_la-hash.Tpo -c -o libnesta_la-hash.lo `test -f 'hash.c' || echo '$(srcdir)/'`hash.c
+libnesta_la-hash.lo: src/hash.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-hash.lo -MD -MP -MF $(DEPDIR)/libnesta_la-hash.Tpo -c -o libnesta_la-hash.lo `test -f 'src/hash.c' || echo '$(srcdir)/'`src/hash.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-hash.Tpo $(DEPDIR)/libnesta_la-hash.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='hash.c' object='libnesta_la-hash.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/hash.c' object='libnesta_la-hash.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-hash.lo `test -f 'hash.c' || echo '$(srcdir)/'`hash.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-hash.lo `test -f 'src/hash.c' || echo '$(srcdir)/'`src/hash.c
 
-libnesta_la-hdb.lo: hdb.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-hdb.lo -MD -MP -MF $(DEPDIR)/libnesta_la-hdb.Tpo -c -o libnesta_la-hdb.lo `test -f 'hdb.c' || echo '$(srcdir)/'`hdb.c
+libnesta_la-hdb.lo: src/hdb.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-hdb.lo -MD -MP -MF $(DEPDIR)/libnesta_la-hdb.Tpo -c -o libnesta_la-hdb.lo `test -f 'src/hdb.c' || echo '$(srcdir)/'`src/hdb.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-hdb.Tpo $(DEPDIR)/libnesta_la-hdb.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='hdb.c' object='libnesta_la-hdb.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/hdb.c' object='libnesta_la-hdb.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-hdb.lo `test -f 'hdb.c' || echo '$(srcdir)/'`hdb.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-hdb.lo `test -f 'src/hdb.c' || echo '$(srcdir)/'`src/hdb.c
 
-libnesta_la-header.lo: header.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-header.lo -MD -MP -MF $(DEPDIR)/libnesta_la-header.Tpo -c -o libnesta_la-header.lo `test -f 'header.c' || echo '$(srcdir)/'`header.c
+libnesta_la-header.lo: src/header.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-header.lo -MD -MP -MF $(DEPDIR)/libnesta_la-header.Tpo -c -o libnesta_la-header.lo `test -f 'src/header.c' || echo '$(srcdir)/'`src/header.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-header.Tpo $(DEPDIR)/libnesta_la-header.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='header.c' object='libnesta_la-header.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/header.c' object='libnesta_la-header.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-header.lo `test -f 'header.c' || echo '$(srcdir)/'`header.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-header.lo `test -f 'src/header.c' || echo '$(srcdir)/'`src/header.c
 
-libnesta_la-logout.lo: logout.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-logout.lo -MD -MP -MF $(DEPDIR)/libnesta_la-logout.Tpo -c -o libnesta_la-logout.lo `test -f 'logout.c' || echo '$(srcdir)/'`logout.c
+libnesta_la-logout.lo: src/logout.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-logout.lo -MD -MP -MF $(DEPDIR)/libnesta_la-logout.Tpo -c -o libnesta_la-logout.lo `test -f 'src/logout.c' || echo '$(srcdir)/'`src/logout.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-logout.Tpo $(DEPDIR)/libnesta_la-logout.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='logout.c' object='libnesta_la-logout.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/logout.c' object='libnesta_la-logout.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-logout.lo `test -f 'logout.c' || echo '$(srcdir)/'`logout.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-logout.lo `test -f 'src/logout.c' || echo '$(srcdir)/'`src/logout.c
 
-libnesta_la-md5.lo: md5.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-md5.lo -MD -MP -MF $(DEPDIR)/libnesta_la-md5.Tpo -c -o libnesta_la-md5.lo `test -f 'md5.c' || echo '$(srcdir)/'`md5.c
+libnesta_la-md5.lo: src/md5.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-md5.lo -MD -MP -MF $(DEPDIR)/libnesta_la-md5.Tpo -c -o libnesta_la-md5.lo `test -f 'src/md5.c' || echo '$(srcdir)/'`src/md5.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-md5.Tpo $(DEPDIR)/libnesta_la-md5.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='md5.c' object='libnesta_la-md5.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/md5.c' object='libnesta_la-md5.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-md5.lo `test -f 'md5.c' || echo '$(srcdir)/'`md5.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-md5.lo `test -f 'src/md5.c' || echo '$(srcdir)/'`src/md5.c
 
-libnesta_la-md5c.lo: md5c.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-md5c.lo -MD -MP -MF $(DEPDIR)/libnesta_la-md5c.Tpo -c -o libnesta_la-md5c.lo `test -f 'md5c.c' || echo '$(srcdir)/'`md5c.c
+libnesta_la-md5c.lo: src/md5c.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-md5c.lo -MD -MP -MF $(DEPDIR)/libnesta_la-md5c.Tpo -c -o libnesta_la-md5c.lo `test -f 'src/md5c.c' || echo '$(srcdir)/'`src/md5c.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-md5c.Tpo $(DEPDIR)/libnesta_la-md5c.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='md5c.c' object='libnesta_la-md5c.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/md5c.c' object='libnesta_la-md5c.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-md5c.lo `test -f 'md5c.c' || echo '$(srcdir)/'`md5c.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-md5c.lo `test -f 'src/md5c.c' || echo '$(srcdir)/'`src/md5c.c
 
-libnesta_la-memutil.lo: memutil.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-memutil.lo -MD -MP -MF $(DEPDIR)/libnesta_la-memutil.Tpo -c -o libnesta_la-memutil.lo `test -f 'memutil.c' || echo '$(srcdir)/'`memutil.c
+libnesta_la-memutil.lo: src/memutil.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-memutil.lo -MD -MP -MF $(DEPDIR)/libnesta_la-memutil.Tpo -c -o libnesta_la-memutil.lo `test -f 'src/memutil.c' || echo '$(srcdir)/'`src/memutil.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-memutil.Tpo $(DEPDIR)/libnesta_la-memutil.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='memutil.c' object='libnesta_la-memutil.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/memutil.c' object='libnesta_la-memutil.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-memutil.lo `test -f 'memutil.c' || echo '$(srcdir)/'`memutil.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-memutil.lo `test -f 'src/memutil.c' || echo '$(srcdir)/'`src/memutil.c
 
-libnesta_la-mime.lo: mime.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-mime.lo -MD -MP -MF $(DEPDIR)/libnesta_la-mime.Tpo -c -o libnesta_la-mime.lo `test -f 'mime.c' || echo '$(srcdir)/'`mime.c
+libnesta_la-mime.lo: src/mime.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-mime.lo -MD -MP -MF $(DEPDIR)/libnesta_la-mime.Tpo -c -o libnesta_la-mime.lo `test -f 'src/mime.c' || echo '$(srcdir)/'`src/mime.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-mime.Tpo $(DEPDIR)/libnesta_la-mime.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='mime.c' object='libnesta_la-mime.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/mime.c' object='libnesta_la-mime.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-mime.lo `test -f 'mime.c' || echo '$(srcdir)/'`mime.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-mime.lo `test -f 'src/mime.c' || echo '$(srcdir)/'`src/mime.c
 
-libnesta_la-mmap.lo: mmap.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-mmap.lo -MD -MP -MF $(DEPDIR)/libnesta_la-mmap.Tpo -c -o libnesta_la-mmap.lo `test -f 'mmap.c' || echo '$(srcdir)/'`mmap.c
+libnesta_la-mmap.lo: src/mmap.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-mmap.lo -MD -MP -MF $(DEPDIR)/libnesta_la-mmap.Tpo -c -o libnesta_la-mmap.lo `test -f 'src/mmap.c' || echo '$(srcdir)/'`src/mmap.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-mmap.Tpo $(DEPDIR)/libnesta_la-mmap.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='mmap.c' object='libnesta_la-mmap.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/mmap.c' object='libnesta_la-mmap.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-mmap.lo `test -f 'mmap.c' || echo '$(srcdir)/'`mmap.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-mmap.lo `test -f 'src/mmap.c' || echo '$(srcdir)/'`src/mmap.c
 
-libnesta_la-mtfunc.lo: mtfunc.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-mtfunc.lo -MD -MP -MF $(DEPDIR)/libnesta_la-mtfunc.Tpo -c -o libnesta_la-mtfunc.lo `test -f 'mtfunc.c' || echo '$(srcdir)/'`mtfunc.c
+libnesta_la-mtfunc.lo: src/mtfunc.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-mtfunc.lo -MD -MP -MF $(DEPDIR)/libnesta_la-mtfunc.Tpo -c -o libnesta_la-mtfunc.lo `test -f 'src/mtfunc.c' || echo '$(srcdir)/'`src/mtfunc.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-mtfunc.Tpo $(DEPDIR)/libnesta_la-mtfunc.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='mtfunc.c' object='libnesta_la-mtfunc.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/mtfunc.c' object='libnesta_la-mtfunc.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-mtfunc.lo `test -f 'mtfunc.c' || echo '$(srcdir)/'`mtfunc.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-mtfunc.lo `test -f 'src/mtfunc.c' || echo '$(srcdir)/'`src/mtfunc.c
 
-libnesta_la-nio.lo: nio.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-nio.lo -MD -MP -MF $(DEPDIR)/libnesta_la-nio.Tpo -c -o libnesta_la-nio.lo `test -f 'nio.c' || echo '$(srcdir)/'`nio.c
+libnesta_la-nio.lo: src/nio.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-nio.lo -MD -MP -MF $(DEPDIR)/libnesta_la-nio.Tpo -c -o libnesta_la-nio.lo `test -f 'src/nio.c' || echo '$(srcdir)/'`src/nio.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-nio.Tpo $(DEPDIR)/libnesta_la-nio.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='nio.c' object='libnesta_la-nio.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/nio.c' object='libnesta_la-nio.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-nio.lo `test -f 'nio.c' || echo '$(srcdir)/'`nio.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-nio.lo `test -f 'src/nio.c' || echo '$(srcdir)/'`src/nio.c
 
-libnesta_la-ociio.lo: ociio.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-ociio.lo -MD -MP -MF $(DEPDIR)/libnesta_la-ociio.Tpo -c -o libnesta_la-ociio.lo `test -f 'ociio.c' || echo '$(srcdir)/'`ociio.c
+libnesta_la-ociio.lo: src/ociio.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-ociio.lo -MD -MP -MF $(DEPDIR)/libnesta_la-ociio.Tpo -c -o libnesta_la-ociio.lo `test -f 'src/ociio.c' || echo '$(srcdir)/'`src/ociio.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-ociio.Tpo $(DEPDIR)/libnesta_la-ociio.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='ociio.c' object='libnesta_la-ociio.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/ociio.c' object='libnesta_la-ociio.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-ociio.lo `test -f 'ociio.c' || echo '$(srcdir)/'`ociio.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-ociio.lo `test -f 'src/ociio.c' || echo '$(srcdir)/'`src/ociio.c
 
-libnesta_la-pgsql.lo: pgsql.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-pgsql.lo -MD -MP -MF $(DEPDIR)/libnesta_la-pgsql.Tpo -c -o libnesta_la-pgsql.lo `test -f 'pgsql.c' || echo '$(srcdir)/'`pgsql.c
+libnesta_la-pgsql.lo: src/pgsql.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-pgsql.lo -MD -MP -MF $(DEPDIR)/libnesta_la-pgsql.Tpo -c -o libnesta_la-pgsql.lo `test -f 'src/pgsql.c' || echo '$(srcdir)/'`src/pgsql.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-pgsql.Tpo $(DEPDIR)/libnesta_la-pgsql.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='pgsql.c' object='libnesta_la-pgsql.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/pgsql.c' object='libnesta_la-pgsql.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-pgsql.lo `test -f 'pgsql.c' || echo '$(srcdir)/'`pgsql.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-pgsql.lo `test -f 'src/pgsql.c' || echo '$(srcdir)/'`src/pgsql.c
 
-libnesta_la-pool.lo: pool.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-pool.lo -MD -MP -MF $(DEPDIR)/libnesta_la-pool.Tpo -c -o libnesta_la-pool.lo `test -f 'pool.c' || echo '$(srcdir)/'`pool.c
+libnesta_la-pool.lo: src/pool.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-pool.lo -MD -MP -MF $(DEPDIR)/libnesta_la-pool.Tpo -c -o libnesta_la-pool.lo `test -f 'src/pool.c' || echo '$(srcdir)/'`src/pool.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-pool.Tpo $(DEPDIR)/libnesta_la-pool.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='pool.c' object='libnesta_la-pool.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/pool.c' object='libnesta_la-pool.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-pool.lo `test -f 'pool.c' || echo '$(srcdir)/'`pool.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-pool.lo `test -f 'src/pool.c' || echo '$(srcdir)/'`src/pool.c
 
-libnesta_la-query.lo: query.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-query.lo -MD -MP -MF $(DEPDIR)/libnesta_la-query.Tpo -c -o libnesta_la-query.lo `test -f 'query.c' || echo '$(srcdir)/'`query.c
+libnesta_la-query.lo: src/query.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-query.lo -MD -MP -MF $(DEPDIR)/libnesta_la-query.Tpo -c -o libnesta_la-query.lo `test -f 'src/query.c' || echo '$(srcdir)/'`src/query.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-query.Tpo $(DEPDIR)/libnesta_la-query.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='query.c' object='libnesta_la-query.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/query.c' object='libnesta_la-query.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-query.lo `test -f 'query.c' || echo '$(srcdir)/'`query.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-query.lo `test -f 'src/query.c' || echo '$(srcdir)/'`src/query.c
 
-libnesta_la-queue.lo: queue.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-queue.lo -MD -MP -MF $(DEPDIR)/libnesta_la-queue.Tpo -c -o libnesta_la-queue.lo `test -f 'queue.c' || echo '$(srcdir)/'`queue.c
+libnesta_la-queue.lo: src/queue.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-queue.lo -MD -MP -MF $(DEPDIR)/libnesta_la-queue.Tpo -c -o libnesta_la-queue.lo `test -f 'src/queue.c' || echo '$(srcdir)/'`src/queue.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-queue.Tpo $(DEPDIR)/libnesta_la-queue.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='queue.c' object='libnesta_la-queue.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/queue.c' object='libnesta_la-queue.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-queue.lo `test -f 'queue.c' || echo '$(srcdir)/'`queue.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-queue.lo `test -f 'src/queue.c' || echo '$(srcdir)/'`src/queue.c
 
-libnesta_la-recv.lo: recv.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-recv.lo -MD -MP -MF $(DEPDIR)/libnesta_la-recv.Tpo -c -o libnesta_la-recv.lo `test -f 'recv.c' || echo '$(srcdir)/'`recv.c
+libnesta_la-recv.lo: src/recv.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-recv.lo -MD -MP -MF $(DEPDIR)/libnesta_la-recv.Tpo -c -o libnesta_la-recv.lo `test -f 'src/recv.c' || echo '$(srcdir)/'`src/recv.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-recv.Tpo $(DEPDIR)/libnesta_la-recv.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='recv.c' object='libnesta_la-recv.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/recv.c' object='libnesta_la-recv.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-recv.lo `test -f 'recv.c' || echo '$(srcdir)/'`recv.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-recv.lo `test -f 'src/recv.c' || echo '$(srcdir)/'`src/recv.c
 
-libnesta_la-req_heap.lo: req_heap.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-req_heap.lo -MD -MP -MF $(DEPDIR)/libnesta_la-req_heap.Tpo -c -o libnesta_la-req_heap.lo `test -f 'req_heap.c' || echo '$(srcdir)/'`req_heap.c
+libnesta_la-req_heap.lo: src/req_heap.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-req_heap.lo -MD -MP -MF $(DEPDIR)/libnesta_la-req_heap.Tpo -c -o libnesta_la-req_heap.lo `test -f 'src/req_heap.c' || echo '$(srcdir)/'`src/req_heap.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-req_heap.Tpo $(DEPDIR)/libnesta_la-req_heap.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='req_heap.c' object='libnesta_la-req_heap.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/req_heap.c' object='libnesta_la-req_heap.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-req_heap.lo `test -f 'req_heap.c' || echo '$(srcdir)/'`req_heap.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-req_heap.lo `test -f 'src/req_heap.c' || echo '$(srcdir)/'`src/req_heap.c
 
-libnesta_la-request.lo: request.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-request.lo -MD -MP -MF $(DEPDIR)/libnesta_la-request.Tpo -c -o libnesta_la-request.lo `test -f 'request.c' || echo '$(srcdir)/'`request.c
+libnesta_la-request.lo: src/request.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-request.lo -MD -MP -MF $(DEPDIR)/libnesta_la-request.Tpo -c -o libnesta_la-request.lo `test -f 'src/request.c' || echo '$(srcdir)/'`src/request.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-request.Tpo $(DEPDIR)/libnesta_la-request.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='request.c' object='libnesta_la-request.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/request.c' object='libnesta_la-request.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-request.lo `test -f 'request.c' || echo '$(srcdir)/'`request.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-request.lo `test -f 'src/request.c' || echo '$(srcdir)/'`src/request.c
 
-libnesta_la-response.lo: response.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-response.lo -MD -MP -MF $(DEPDIR)/libnesta_la-response.Tpo -c -o libnesta_la-response.lo `test -f 'response.c' || echo '$(srcdir)/'`response.c
+libnesta_la-response.lo: src/response.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-response.lo -MD -MP -MF $(DEPDIR)/libnesta_la-response.Tpo -c -o libnesta_la-response.lo `test -f 'src/response.c' || echo '$(srcdir)/'`src/response.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-response.Tpo $(DEPDIR)/libnesta_la-response.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='response.c' object='libnesta_la-response.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/response.c' object='libnesta_la-response.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-response.lo `test -f 'response.c' || echo '$(srcdir)/'`response.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-response.lo `test -f 'src/response.c' || echo '$(srcdir)/'`src/response.c
 
-libnesta_la-send.lo: send.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-send.lo -MD -MP -MF $(DEPDIR)/libnesta_la-send.Tpo -c -o libnesta_la-send.lo `test -f 'send.c' || echo '$(srcdir)/'`send.c
+libnesta_la-send.lo: src/send.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-send.lo -MD -MP -MF $(DEPDIR)/libnesta_la-send.Tpo -c -o libnesta_la-send.lo `test -f 'src/send.c' || echo '$(srcdir)/'`src/send.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-send.Tpo $(DEPDIR)/libnesta_la-send.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='send.c' object='libnesta_la-send.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/send.c' object='libnesta_la-send.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-send.lo `test -f 'send.c' || echo '$(srcdir)/'`send.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-send.lo `test -f 'src/send.c' || echo '$(srcdir)/'`src/send.c
 
-libnesta_la-session.lo: session.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-session.lo -MD -MP -MF $(DEPDIR)/libnesta_la-session.Tpo -c -o libnesta_la-session.lo `test -f 'session.c' || echo '$(srcdir)/'`session.c
+libnesta_la-session.lo: src/session.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-session.lo -MD -MP -MF $(DEPDIR)/libnesta_la-session.Tpo -c -o libnesta_la-session.lo `test -f 'src/session.c' || echo '$(srcdir)/'`src/session.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-session.Tpo $(DEPDIR)/libnesta_la-session.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='session.c' object='libnesta_la-session.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/session.c' object='libnesta_la-session.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-session.lo `test -f 'session.c' || echo '$(srcdir)/'`session.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-session.lo `test -f 'src/session.c' || echo '$(srcdir)/'`src/session.c
 
-libnesta_la-smtp_client.lo: smtp_client.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-smtp_client.lo -MD -MP -MF $(DEPDIR)/libnesta_la-smtp_client.Tpo -c -o libnesta_la-smtp_client.lo `test -f 'smtp_client.c' || echo '$(srcdir)/'`smtp_client.c
+libnesta_la-smtp_client.lo: src/smtp_client.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-smtp_client.lo -MD -MP -MF $(DEPDIR)/libnesta_la-smtp_client.Tpo -c -o libnesta_la-smtp_client.lo `test -f 'src/smtp_client.c' || echo '$(srcdir)/'`src/smtp_client.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-smtp_client.Tpo $(DEPDIR)/libnesta_la-smtp_client.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='smtp_client.c' object='libnesta_la-smtp_client.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/smtp_client.c' object='libnesta_la-smtp_client.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-smtp_client.lo `test -f 'smtp_client.c' || echo '$(srcdir)/'`smtp_client.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-smtp_client.lo `test -f 'src/smtp_client.c' || echo '$(srcdir)/'`src/smtp_client.c
 
-libnesta_la-sock.lo: sock.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-sock.lo -MD -MP -MF $(DEPDIR)/libnesta_la-sock.Tpo -c -o libnesta_la-sock.lo `test -f 'sock.c' || echo '$(srcdir)/'`sock.c
+libnesta_la-sock.lo: src/sock.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-sock.lo -MD -MP -MF $(DEPDIR)/libnesta_la-sock.Tpo -c -o libnesta_la-sock.lo `test -f 'src/sock.c' || echo '$(srcdir)/'`src/sock.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-sock.Tpo $(DEPDIR)/libnesta_la-sock.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='sock.c' object='libnesta_la-sock.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/sock.c' object='libnesta_la-sock.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-sock.lo `test -f 'sock.c' || echo '$(srcdir)/'`sock.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-sock.lo `test -f 'src/sock.c' || echo '$(srcdir)/'`src/sock.c
 
-libnesta_la-sockevent.lo: sockevent.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-sockevent.lo -MD -MP -MF $(DEPDIR)/libnesta_la-sockevent.Tpo -c -o libnesta_la-sockevent.lo `test -f 'sockevent.c' || echo '$(srcdir)/'`sockevent.c
+libnesta_la-sockevent.lo: src/sockevent.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-sockevent.lo -MD -MP -MF $(DEPDIR)/libnesta_la-sockevent.Tpo -c -o libnesta_la-sockevent.lo `test -f 'src/sockevent.c' || echo '$(srcdir)/'`src/sockevent.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-sockevent.Tpo $(DEPDIR)/libnesta_la-sockevent.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='sockevent.c' object='libnesta_la-sockevent.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/sockevent.c' object='libnesta_la-sockevent.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-sockevent.lo `test -f 'sockevent.c' || echo '$(srcdir)/'`sockevent.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-sockevent.lo `test -f 'src/sockevent.c' || echo '$(srcdir)/'`src/sockevent.c
 
-libnesta_la-srelay_client.lo: srelay_client.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-srelay_client.lo -MD -MP -MF $(DEPDIR)/libnesta_la-srelay_client.Tpo -c -o libnesta_la-srelay_client.lo `test -f 'srelay_client.c' || echo '$(srcdir)/'`srelay_client.c
+libnesta_la-srelay_client.lo: src/srelay_client.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-srelay_client.lo -MD -MP -MF $(DEPDIR)/libnesta_la-srelay_client.Tpo -c -o libnesta_la-srelay_client.lo `test -f 'src/srelay_client.c' || echo '$(srcdir)/'`src/srelay_client.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-srelay_client.Tpo $(DEPDIR)/libnesta_la-srelay_client.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='srelay_client.c' object='libnesta_la-srelay_client.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/srelay_client.c' object='libnesta_la-srelay_client.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-srelay_client.lo `test -f 'srelay_client.c' || echo '$(srcdir)/'`srelay_client.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-srelay_client.lo `test -f 'src/srelay_client.c' || echo '$(srcdir)/'`src/srelay_client.c
 
-libnesta_la-strutil.lo: strutil.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-strutil.lo -MD -MP -MF $(DEPDIR)/libnesta_la-strutil.Tpo -c -o libnesta_la-strutil.lo `test -f 'strutil.c' || echo '$(srcdir)/'`strutil.c
+libnesta_la-strutil.lo: src/strutil.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-strutil.lo -MD -MP -MF $(DEPDIR)/libnesta_la-strutil.Tpo -c -o libnesta_la-strutil.lo `test -f 'src/strutil.c' || echo '$(srcdir)/'`src/strutil.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-strutil.Tpo $(DEPDIR)/libnesta_la-strutil.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='strutil.c' object='libnesta_la-strutil.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/strutil.c' object='libnesta_la-strutil.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-strutil.lo `test -f 'strutil.c' || echo '$(srcdir)/'`strutil.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-strutil.lo `test -f 'src/strutil.c' || echo '$(srcdir)/'`src/strutil.c
 
-libnesta_la-syscall.lo: syscall.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-syscall.lo -MD -MP -MF $(DEPDIR)/libnesta_la-syscall.Tpo -c -o libnesta_la-syscall.lo `test -f 'syscall.c' || echo '$(srcdir)/'`syscall.c
+libnesta_la-syscall.lo: src/syscall.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-syscall.lo -MD -MP -MF $(DEPDIR)/libnesta_la-syscall.Tpo -c -o libnesta_la-syscall.lo `test -f 'src/syscall.c' || echo '$(srcdir)/'`src/syscall.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-syscall.Tpo $(DEPDIR)/libnesta_la-syscall.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='syscall.c' object='libnesta_la-syscall.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/syscall.c' object='libnesta_la-syscall.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-syscall.lo `test -f 'syscall.c' || echo '$(srcdir)/'`syscall.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-syscall.lo `test -f 'src/syscall.c' || echo '$(srcdir)/'`src/syscall.c
 
-libnesta_la-template.lo: template.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-template.lo -MD -MP -MF $(DEPDIR)/libnesta_la-template.Tpo -c -o libnesta_la-template.lo `test -f 'template.c' || echo '$(srcdir)/'`template.c
+libnesta_la-template.lo: src/template.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-template.lo -MD -MP -MF $(DEPDIR)/libnesta_la-template.Tpo -c -o libnesta_la-template.lo `test -f 'src/template.c' || echo '$(srcdir)/'`src/template.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-template.Tpo $(DEPDIR)/libnesta_la-template.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='template.c' object='libnesta_la-template.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/template.c' object='libnesta_la-template.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-template.lo `test -f 'template.c' || echo '$(srcdir)/'`template.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-template.lo `test -f 'src/template.c' || echo '$(srcdir)/'`src/template.c
 
-libnesta_la-url.lo: url.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-url.lo -MD -MP -MF $(DEPDIR)/libnesta_la-url.Tpo -c -o libnesta_la-url.lo `test -f 'url.c' || echo '$(srcdir)/'`url.c
+libnesta_la-url.lo: src/url.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-url.lo -MD -MP -MF $(DEPDIR)/libnesta_la-url.Tpo -c -o libnesta_la-url.lo `test -f 'src/url.c' || echo '$(srcdir)/'`src/url.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-url.Tpo $(DEPDIR)/libnesta_la-url.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='url.c' object='libnesta_la-url.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/url.c' object='libnesta_la-url.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-url.lo `test -f 'url.c' || echo '$(srcdir)/'`url.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-url.lo `test -f 'src/url.c' || echo '$(srcdir)/'`src/url.c
 
-libnesta_la-user_param.lo: user_param.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-user_param.lo -MD -MP -MF $(DEPDIR)/libnesta_la-user_param.Tpo -c -o libnesta_la-user_param.lo `test -f 'user_param.c' || echo '$(srcdir)/'`user_param.c
+libnesta_la-user_param.lo: src/user_param.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-user_param.lo -MD -MP -MF $(DEPDIR)/libnesta_la-user_param.Tpo -c -o libnesta_la-user_param.lo `test -f 'src/user_param.c' || echo '$(srcdir)/'`src/user_param.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-user_param.Tpo $(DEPDIR)/libnesta_la-user_param.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='user_param.c' object='libnesta_la-user_param.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/user_param.c' object='libnesta_la-user_param.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-user_param.lo `test -f 'user_param.c' || echo '$(srcdir)/'`user_param.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-user_param.lo `test -f 'src/user_param.c' || echo '$(srcdir)/'`src/user_param.c
 
-libnesta_la-vector.lo: vector.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-vector.lo -MD -MP -MF $(DEPDIR)/libnesta_la-vector.Tpo -c -o libnesta_la-vector.lo `test -f 'vector.c' || echo '$(srcdir)/'`vector.c
+libnesta_la-vector.lo: src/vector.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-vector.lo -MD -MP -MF $(DEPDIR)/libnesta_la-vector.Tpo -c -o libnesta_la-vector.lo `test -f 'src/vector.c' || echo '$(srcdir)/'`src/vector.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-vector.Tpo $(DEPDIR)/libnesta_la-vector.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='vector.c' object='libnesta_la-vector.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/vector.c' object='libnesta_la-vector.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-vector.lo `test -f 'vector.c' || echo '$(srcdir)/'`vector.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-vector.lo `test -f 'src/vector.c' || echo '$(srcdir)/'`src/vector.c
 
-libnesta_la-sockbuf.lo: sockbuf.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-sockbuf.lo -MD -MP -MF $(DEPDIR)/libnesta_la-sockbuf.Tpo -c -o libnesta_la-sockbuf.lo `test -f 'sockbuf.c' || echo '$(srcdir)/'`sockbuf.c
+libnesta_la-sockbuf.lo: src/sockbuf.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-sockbuf.lo -MD -MP -MF $(DEPDIR)/libnesta_la-sockbuf.Tpo -c -o libnesta_la-sockbuf.lo `test -f 'src/sockbuf.c' || echo '$(srcdir)/'`src/sockbuf.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-sockbuf.Tpo $(DEPDIR)/libnesta_la-sockbuf.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='sockbuf.c' object='libnesta_la-sockbuf.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/sockbuf.c' object='libnesta_la-sockbuf.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-sockbuf.lo `test -f 'sockbuf.c' || echo '$(srcdir)/'`sockbuf.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-sockbuf.lo `test -f 'src/sockbuf.c' || echo '$(srcdir)/'`src/sockbuf.c
 
-libnesta_la-xml.lo: xml.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-xml.lo -MD -MP -MF $(DEPDIR)/libnesta_la-xml.Tpo -c -o libnesta_la-xml.lo `test -f 'xml.c' || echo '$(srcdir)/'`xml.c
+libnesta_la-xml.lo: src/xml.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-xml.lo -MD -MP -MF $(DEPDIR)/libnesta_la-xml.Tpo -c -o libnesta_la-xml.lo `test -f 'src/xml.c' || echo '$(srcdir)/'`src/xml.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-xml.Tpo $(DEPDIR)/libnesta_la-xml.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='xml.c' object='libnesta_la-xml.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/xml.c' object='libnesta_la-xml.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-xml.lo `test -f 'xml.c' || echo '$(srcdir)/'`xml.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-xml.lo `test -f 'src/xml.c' || echo '$(srcdir)/'`src/xml.c
 
-libnesta_la-zlibutil.lo: zlibutil.c
-@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-zlibutil.lo -MD -MP -MF $(DEPDIR)/libnesta_la-zlibutil.Tpo -c -o libnesta_la-zlibutil.lo `test -f 'zlibutil.c' || echo '$(srcdir)/'`zlibutil.c
+libnesta_la-zlibutil.lo: src/zlibutil.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-zlibutil.lo -MD -MP -MF $(DEPDIR)/libnesta_la-zlibutil.Tpo -c -o libnesta_la-zlibutil.lo `test -f 'src/zlibutil.c' || echo '$(srcdir)/'`src/zlibutil.c
 @am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-zlibutil.Tpo $(DEPDIR)/libnesta_la-zlibutil.Plo
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='zlibutil.c' object='libnesta_la-zlibutil.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/zlibutil.c' object='libnesta_la-zlibutil.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-zlibutil.lo `test -f 'zlibutil.c' || echo '$(srcdir)/'`zlibutil.c
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-zlibutil.lo `test -f 'src/zlibutil.c' || echo '$(srcdir)/'`src/zlibutil.c
 
 mostlyclean-libtool:
 	-rm -f *.lo

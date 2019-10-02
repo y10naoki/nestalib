@@ -84,6 +84,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE09B9F72344492200E63C00 /* config.guess */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = config.guess; sourceTree = "<group>"; };
+		CE09B9F82344492200E63C00 /* config.sub */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = config.sub; sourceTree = "<group>"; };
+		CE09B9F92344492300E63C00 /* ltmain.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = ltmain.sh; sourceTree = "<group>"; };
 		CE60E8D6233CA385004FB46B /* mmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mmap.h; path = include/mmap.h; sourceTree = "<group>"; };
 		CE60E8D7233CA385004FB46B /* syscall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = syscall.h; path = include/syscall.h; sourceTree = "<group>"; };
 		CE60E8D8233CA385004FB46B /* zlibutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zlibutil.h; path = include/zlibutil.h; sourceTree = "<group>"; };
@@ -172,7 +175,6 @@
 		CE69DBB2233DC85700F088AF /* depcomp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = depcomp; sourceTree = "<group>"; };
 		CE69DBB3233DC85700F088AF /* Makefile.am */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.am; sourceTree = "<group>"; };
 		CE69DBB4233DC85700F088AF /* INSTALL */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = INSTALL; sourceTree = "<group>"; };
-		CE69DBB5233DC85700F088AF /* autom4te.cache */ = {isa = PBXFileReference; lastKnownFileType = folder; path = autom4te.cache; sourceTree = "<group>"; };
 		CE69DBB6233DC85700F088AF /* missing */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = missing; sourceTree = "<group>"; };
 		CE69DBB7233DC85800F088AF /* configure.ac */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = configure.ac; sourceTree = "<group>"; };
 		CEB8B907233B5BC600AE9D27 /* libnestalib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libnestalib.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -280,9 +282,11 @@
 		CE69DBA6233DC83800F088AF /* autotools */ = {
 			isa = PBXGroup;
 			children = (
+				CE09B9F72344492200E63C00 /* config.guess */,
+				CE09B9F82344492200E63C00 /* config.sub */,
+				CE09B9F92344492300E63C00 /* ltmain.sh */,
 				CE69DBA9233DC85600F088AF /* aclocal.m4 */,
 				CE69DBAD233DC85600F088AF /* AUTHORS */,
-				CE69DBB5233DC85700F088AF /* autom4te.cache */,
 				CE69DBAE233DC85700F088AF /* ChangeLog */,
 				CE69DBA7233DC85600F088AF /* config.h.in */,
 				CE69DBAC233DC85600F088AF /* configure */,

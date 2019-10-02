@@ -1,0 +1,12 @@
+$ autoheader
+$ aclocal
+$ automake -a -c
+$ autoconf
+
+$ ./configure
+$ make
+$ sudo make install
+
+
+for MacOSX
+$ ./configure --with-libxml=/Developer/SDKs/MacOSX10.6.sdk/usr/include/libxml2
