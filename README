@@ -1,12 +1,15 @@
-$ autoheader
-$ aclocal
-$ automake -a -c
-$ autoconf
-
+<How to Build>
 $ ./configure
 $ make
 $ sudo make install
 
-
-for MacOSX
+<for MacOSX>
 $ ./configure --with-libxml=/Developer/SDKs/MacOSX10.6.sdk/usr/include/libxml2
+
+
+<How to use AutoTools>
+$ autoheader
+$ aclocal
+$ automake -a -c
+$ autoconf
+
