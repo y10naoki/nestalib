@@ -81,6 +81,8 @@
 		CE60E967233CA3EF004FB46B /* req_heap.c in Sources */ = {isa = PBXBuildFile; fileRef = CE60E939233CA3EF004FB46B /* req_heap.c */; };
 		CE60E968233CA3EF004FB46B /* recv.c in Sources */ = {isa = PBXBuildFile; fileRef = CE60E93A233CA3EF004FB46B /* recv.c */; };
 		CE60E969233CA3EF004FB46B /* request.c in Sources */ = {isa = PBXBuildFile; fileRef = CE60E93B233CA3EF004FB46B /* request.c */; };
+		CEEB246B234AD30E005BFBEB /* file.c in Sources */ = {isa = PBXBuildFile; fileRef = CEEB246A234AD30E005BFBEB /* file.c */; };
+		CEEB246D234AD3A2005BFBEB /* file.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEB246C234AD3A2005BFBEB /* file.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -178,6 +180,8 @@
 		CE69DBB6233DC85700F088AF /* missing */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = missing; sourceTree = "<group>"; };
 		CE69DBB7233DC85800F088AF /* configure.ac */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = configure.ac; sourceTree = "<group>"; };
 		CEB8B907233B5BC600AE9D27 /* libnestalib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libnestalib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEEB246A234AD30E005BFBEB /* file.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = file.c; path = src/file.c; sourceTree = "<group>"; };
+		CEEB246C234AD3A2005BFBEB /* file.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = file.h; path = include/file.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +206,7 @@
 				CE60E8DD233CA386004FB46B /* dataio.h */,
 				CE60E8E8233CA387004FB46B /* expapi.h */,
 				CE60E8DB233CA385004FB46B /* fcache.h */,
+				CEEB246C234AD3A2005BFBEB /* file.h */,
 				CE60E8E9233CA387004FB46B /* hash.h */,
 				CE60E8DE233CA386004FB46B /* hdb.h */,
 				CE60E8E3233CA386004FB46B /* md5.h */,
@@ -239,6 +244,7 @@
 				CE60E914233CA3EA004FB46B /* datetime.c */,
 				CE60E933233CA3EE004FB46B /* error.c */,
 				CE60E922233CA3EB004FB46B /* fcache.c */,
+				CEEB246A234AD30E005BFBEB /* file.c */,
 				CE60E92E233CA3ED004FB46B /* handler.c */,
 				CE60E912233CA3EA004FB46B /* hash.c */,
 				CE60E920233CA3EB004FB46B /* hdb.c */,
@@ -342,6 +348,7 @@
 				CE60E902233CA388004FB46B /* bdb.h in Headers */,
 				CE60E909233CA388004FB46B /* nio.h in Headers */,
 				CE60E900233CA388004FB46B /* session.h in Headers */,
+				CEEB246D234AD3A2005BFBEB /* file.h in Headers */,
 				CE60E906233CA388004FB46B /* ociio.h in Headers */,
 				CE60E8F5233CA388004FB46B /* smtp.h in Headers */,
 				CE60E8FE233CA388004FB46B /* vector.h in Headers */,
@@ -444,6 +451,7 @@
 				CE60E959233CA3EF004FB46B /* sock.c in Sources */,
 				CE60E94D233CA3EF004FB46B /* mmap.c in Sources */,
 				CE60E956233CA3EF004FB46B /* btree.c in Sources */,
+				CEEB246B234AD30E005BFBEB /* file.c in Sources */,
 				CE60E962233CA3EF004FB46B /* pgsql.c in Sources */,
 				CE60E948233CA3EF004FB46B /* vector.c in Sources */,
 				CE60E954233CA3EF004FB46B /* pool.c in Sources */,

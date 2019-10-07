@@ -282,6 +282,7 @@ struct sock_buf_t {
 #include "cgiutils.h"
 #include "strutil.h"
 #include "fcache.h"
+#include "file.h"
 #include "queue.h"
 #include "hash.h"
 #include "pool.h"
