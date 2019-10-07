@@ -103,7 +103,7 @@ am__objects_1 = libnesta_la-base64.lo libnesta_la-bdb.lo \
 	libnesta_la-btcache.lo libnesta_la-btio.lo \
 	libnesta_la-btree.lo libnesta_la-cgiutils.lo \
 	libnesta_la-dataio.lo libnesta_la-datetime.lo \
-	libnesta_la-error.lo libnesta_la-fcache.lo \
+	libnesta_la-error.lo libnesta_la-fcache.lo libnesta_la-file.lo \
 	libnesta_la-handler.lo libnesta_la-hash.lo libnesta_la-hdb.lo \
 	libnesta_la-header.lo libnesta_la-logout.lo libnesta_la-md5.lo \
 	libnesta_la-md5c.lo libnesta_la-memutil.lo libnesta_la-mime.lo \
@@ -289,8 +289,8 @@ VERSION_INFO = 0:5:0
 BUILT_SOURCES = nestalib-config.h
 CORE_SRC = src/base64.c    src/bdb.c       src/btcache.c src/btio.c \
            src/btree.c     src/cgiutils.c  src/dataio.c  src/datetime.c \
-           src/error.c     src/fcache.c    src/handler.c src/hash.c \
-           src/hdb.c       src/header.c    src/logout.c \
+           src/error.c     src/fcache.c    src/file.c    src/handler.c \
+           src/hash.c      src/hdb.c       src/header.c  src/logout.c \
            src/md5.c       src/md5c.c      src/memutil.c src/mime.c \
            src/mmap.c      src/mtfunc.c    src/nio.c     src/ociio.c \
            src/pgsql.c     src/pool.c      src/query.c   src/queue.c \
@@ -302,7 +302,7 @@ CORE_SRC = src/base64.c    src/bdb.c       src/btcache.c src/btio.c \
 
 INC_HDR = include/apiexp.h include/bdb.h include/btree.h include/cgiutils.h \
           include/csect.h include/dataio.h include/expapi.h include/fcache.h \
-          include/hash.h include/hdb.h include/md5.h \
+          include/file.h include/hash.h include/hdb.h include/md5.h \
           include/memutil.h include/mmap.h include/mtfunc.h include/nestalib.h \
           include/nio.h include/ociio.h include/pgsql.h include/pool.h \
           include/queue.h include/session.h include/smtp.h include/strutil.h \
@@ -423,6 +423,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libnesta_la-datetime.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libnesta_la-error.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libnesta_la-fcache.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libnesta_la-file.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libnesta_la-handler.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libnesta_la-hash.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libnesta_la-hdb.Plo@am__quote@
@@ -550,6 +551,13 @@ libnesta_la-fcache.lo: src/fcache.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/fcache.c' object='libnesta_la-fcache.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-fcache.lo `test -f 'src/fcache.c' || echo '$(srcdir)/'`src/fcache.c
+
+libnesta_la-file.lo: src/file.c
+@am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-file.lo -MD -MP -MF $(DEPDIR)/libnesta_la-file.Tpo -c -o libnesta_la-file.lo `test -f 'src/file.c' || echo '$(srcdir)/'`src/file.c
+@am__fastdepCC_TRUE@	$(am__mv) $(DEPDIR)/libnesta_la-file.Tpo $(DEPDIR)/libnesta_la-file.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='src/file.c' object='libnesta_la-file.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -c -o libnesta_la-file.lo `test -f 'src/file.c' || echo '$(srcdir)/'`src/file.c
 
 libnesta_la-handler.lo: src/handler.c
 @am__fastdepCC_TRUE@	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnesta_la_CFLAGS) $(CFLAGS) -MT libnesta_la-handler.lo -MD -MP -MF $(DEPDIR)/libnesta_la-handler.Tpo -c -o libnesta_la-handler.lo `test -f 'src/handler.c' || echo '$(srcdir)/'`src/handler.c
