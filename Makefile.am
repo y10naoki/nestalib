@@ -19,8 +19,8 @@ nestalib-config.h: config.h
 
 CORE_SRC = src/base64.c    src/bdb.c       src/btcache.c src/btio.c \
            src/btree.c     src/cgiutils.c  src/dataio.c  src/datetime.c \
-           src/error.c     src/fcache.c    src/handler.c src/hash.c \
-           src/hdb.c       src/header.c    src/logout.c \
+           src/error.c     src/fcache.c    src/file.c    src/handler.c \
+           src/hash.c      src/hdb.c       src/header.c  src/logout.c \
            src/md5.c       src/md5c.c      src/memutil.c src/mime.c \
            src/mmap.c      src/mtfunc.c    src/nio.c     src/ociio.c \
            src/pgsql.c     src/pool.c      src/query.c   src/queue.c \
@@ -32,7 +32,7 @@ CORE_SRC = src/base64.c    src/bdb.c       src/btcache.c src/btio.c \
 
 INC_HDR = include/apiexp.h include/bdb.h include/btree.h include/cgiutils.h \
           include/csect.h include/dataio.h include/expapi.h include/fcache.h \
-          include/hash.h include/hdb.h include/md5.h \
+          include/file.h include/hash.h include/hdb.h include/md5.h \
           include/memutil.h include/mmap.h include/mtfunc.h include/nestalib.h \
           include/nio.h include/ociio.h include/pgsql.h include/pool.h \
           include/queue.h include/session.h include/smtp.h include/strutil.h \
